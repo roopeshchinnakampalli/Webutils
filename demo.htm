@@ -20,6 +20,7 @@
             document.getElementById("allowableLength").addEventListener("keydown",function(){
                 WU.input.allowableLength(this,10,event);
             },false);
+            document.addEventListener("contextmenu",WU.page.disableContextMenu);
         </script>
     </body>
 </html>

@@ -40,9 +40,7 @@ WU.input.allowableLength = function (ctrl, size, event) {
     }
 };
 
-WU.page.disableContextMenu = function () {
+WU.page.disableContextMenu = function (evt) {
     "use strict";
-    document.oncontextmenu = function () {
-        return false;
-    };
+    evt.preventDefault();
 };
