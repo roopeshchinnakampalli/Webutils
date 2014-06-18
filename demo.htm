@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo page for WebUtils.js</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <div class="container">
+            <div id="numericTextBox">
+                    Numeric Text Box: <input type="text" id="numeric" />
+            </div>
+            <div id="allowableLengthTextBox">
+                    Max. allowed length 10 chars: <input type="text" id="allowableLength" />
+            </div>
+        </div>
+        <script src="WebUtils.js"></script>
+        <script>
+            document.getElementById("numeric").addEventListener("keydown",WU.input.numericTextBox,false);
+            document.getElementById("allowableLength").addEventListener("keydown",function(){
+                WU.input.allowableLength(this,10,event);
+            },false);
+        </script>
+    </body>
+</html>
+       
